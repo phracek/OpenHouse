@@ -44,11 +44,11 @@ class SanityCheck1(module_framework.AvocadoTest):
 
     def test_binary(self):
         self.start()
-        self.run("ls -la /usr/bin/memcached.service")
+        self.assertEqual(self.run("ls -la /usr/bin/memcached.service"), 0)
 
     def test_config(self):
         self.start()
-        self.run("grep -rn \"11221\" /etc/sysconfig/memcached")
+        self.assertEqual(self.run("grep -rn \"11221\" /etc/sysconfig/memcached"), 0)
 
 
 if __name__ == '__main__':

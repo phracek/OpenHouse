@@ -1,7 +1,18 @@
-Testing memcached for OpenHouse
-===============================
+Testing memcached container by MTF for OpenHouse
+================================================
+
+MTF is the tool which can help you with testing containers, so you guarantee that container works
+
+Install MTF
+-----------
+
+```bash
+$ dnf copr enable phracek/meta-test-family
+$ dnf install -y meta-test-family
+```
 
 How to test memcached container
+-------------------------------
 
 ```bash
 make test_mtf
